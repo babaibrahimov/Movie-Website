@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 1000;
+    /* background: #333; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header .logo a
+{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header .logo span
+{
+    font-size: 5rem;
+    line-height: 2rem;
+    color: rgb(255, 68, 0);
+}
+
+header nav ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li
+{
+    list-style: none;
+    padding-right: 15px;
+}
+
+header nav ul li a
+{
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+header nav ul li a:hover
+{
+    background: #fff;
+    color: orangered;
+}
+
+header.sticky
+{
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.05);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+header.sticky nav ul li a
+{
+    color: #000;
+}
+
+header.sticky .logo a
+{
+    color: #000;
+}
+
+header.sticky nav ul li a:hover
+{
+    background: orangered;
+    color: #fff;
+}
+
+
+#user
+{
+    background: orangered;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+#user:hover {opacity: .9;}
+
+/* BANNER */
+
+.banner
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-image: url(./img/banner.webp);
+    background-position: top;
+    background-size: cover;
+    padding: 0px 40px;
+    position: relative;
+}
+
+.banner .text 
+{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0px;
+    height: auto;
+}
+
+.banner .text h1
+{
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+.banner .text ul
+{
+    display: flex;
+    justify-content: left;
+    /* line-height: 15px; */
+}
+
+.banner .text ul li
+{
+    margin-right: 30px;
+    list-style: none;
+}
+
+.banner .text ul li a
+{
+    color: orangered;
+    font-size: .8rem;
+}
+
+.banner .text .content
+{
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.banner .text .watch-trailer
+{
+    margin-top: 20px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: orangered;
+}
+
+.banner .text .watch-trailer:hover
+{
+    color: rgb(226, 89, 39);
+}
+
+
+.banner .text .watch-trailer i
+{
+    font-size: 2rem;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.banner .text .watch-trailer i:hover
+{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* .poster
+{
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    width: 250px;
+    height: 150px;
+    background-image: url(./img/poster-main.jpg);
+    background-size: cover;
+    cursor: pointer;
+    animation: animate 25s linear infinite;
+}
+
+@keyframes animate
+{
+    0%, 100%
+    {
+        background-position: top;
+    }
+    45%, 55%
+    {
+        background-position: bottom;
+    }
+} */
+
+/* right: calc(50% - 250px / 2); */
+
+
+.trailer
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: rgba(0,0,0,0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.trailer video
+{
+    max-width: 900px;
+    outline: none;
+}
+
+
+.trailer #close
+{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+}
+
+.trailer #close:hover
+{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 991px)
+{
+    .trailer video
+    {
+        max-width: 90%;
+    }
+}
+
+.main
+{
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    /* background-image: url(./img/background.jpg); */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background: linear-gradient(295deg, #beecf6, #9ce7f9);
+    background: linear-gradient(354deg, #111, #222);
+}
+
+.main h2
+{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.main h2 i
+{
+    margin: 0px 5px;
+    color: orangered;
+}
+
+.main .movies
+{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main .movies .movie
+{
+    max-width: 350px;
+    width: 100%;
+    /* height: auto; */
+    position: relative;
+    margin: 10px 5px;
+    border-radius: 3px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background: #fff;
+}
+
+.main .movies .movie .poster
+{
+    max-width: 350px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.main .movies .movie .poster img
+{
+    width: 100%;
+    cursor: pointer;
+    transition: .3s;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.main .movies .movie .poster img:hover
+{
+    transform: scale(1.1);
+}
+
+
+.main .movies .movie .title
+{
+    max-width: 350px;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 30px;
+    padding: 0px 10px;
+}
+
+.main .movies .movie .content
+{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: .9rem;
+    color: orangered;
+}
+
+.movie .imdb
+{
+    display: flex;
+}
+
+.movie .imdb span
+{
+    /* font-size: 1rem; */
+    font-weight: 700;
+}
+
+.movie .imdb i
+{
+    margin-right: 5px;
+    font-size: 1rem;
+}
