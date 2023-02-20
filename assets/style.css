@@ -576,7 +576,8 @@ header.sticky nav ul li a:hover
 
 .wrapper-suggestions, 
 .wrapper-for-childrens, 
-.wrapper-sport
+.wrapper-sport,
+.wrapper-comedy
 {
     width: 100%;
     position: relative;
@@ -588,7 +589,8 @@ header.sticky nav ul li a:hover
 
 .wrapper-suggestions h3, 
 .wrapper-for-childrens h3, 
-.wrapper-sport h3
+.wrapper-sport h3,
+.wrapper-comedy h3
 {
     font-size: 1.2rem;
     display: flex;
@@ -597,7 +599,8 @@ header.sticky nav ul li a:hover
 
 .wrapper-suggestions h3 i, 
 .wrapper-for-childrens h3 i, 
-.wrapper-sport h3 i
+.wrapper-sport h3 i,
+.wrapper-comedy h3 i
 {
     margin-right: 5px;
     font-size: .8rem;
@@ -607,7 +610,8 @@ header.sticky nav ul li a:hover
 
 .suggestion-films, 
 .films-for-childrens, 
-.sport-films
+.sport-films,
+.comedy-films
 {
     width: 100%;
     max-height: 200px;
@@ -625,7 +629,8 @@ header.sticky nav ul li a:hover
 
 .suggestion-films::-webkit-scrollbar, 
 .films-for-childrens::-webkit-scrollbar, 
-.sport-films::-webkit-scrollbar
+.sport-films::-webkit-scrollbar,
+.comedy-films::-webkit-scrollbar
 {
     height: 0;
     width: 0;
@@ -653,15 +658,8 @@ header.sticky nav ul li a:hover
     transition: .3s;
 }
 
-.button-right
-{
-    right: 20px;
-}
-
-.button-left
-{
-    left: 20px;
-}
+.button-right{right: 20px;}
+.button-left{left: 20px;}
 
 .button-right:hover, 
 .button-left:hover
@@ -672,7 +670,8 @@ header.sticky nav ul li a:hover
 
 .suggestion-films .item, 
 .films-for-childrens .item, 
-.sport-films .item
+.sport-films .item,
+.comedy-films .item
 {
     min-width: 300px;
     width: 100%;
@@ -684,7 +683,8 @@ header.sticky nav ul li a:hover
 
 .suggestion-films .item img,
 .films-for-childrens .item img, 
-.sport-films .item img
+.sport-films .item img,
+.comedy-films .item img
 {
     width: 100%;
     border-radius: 5px;
