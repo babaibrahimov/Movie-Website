@@ -53,8 +53,11 @@ let suggestionRightButton = document.getElementById('btn-suggestions-right');
 let suggestionLeftButton = document.getElementById('btn-suggestions-left');
 let forChildrenRightButton = document.getElementById('btn-for-childrens-right');
 let forChildrenLeftButton = document.getElementById('btn-for-childrens-left');
+let sportRightButton = document.getElementById('btn-sport-right');
+let sportLeftButton = document.getElementById('btn-sport-left');
 let suggestionScrollArea = document.querySelector('.suggestion-films');
 let forChildrenScrollArea = document.querySelector('.films-for-childrens');
+let sportScrollArea = document.querySelector('.sport-films')
 
 suggestionRightButton.addEventListener('click', () => {
     suggestionScrollArea.scrollLeft += 450
@@ -70,4 +73,12 @@ forChildrenRightButton.addEventListener('click', () => {
 
 forChildrenLeftButton.addEventListener('click', () => {
     forChildrenScrollArea.scrollLeft -= 450
+});
+
+sportRightButton.addEventListener('click', () => {
+    sportScrollArea.scrollLeft += 450
+});
+
+sportLeftButton.addEventListener('click', () => {
+    sportScrollArea.scrollLeft -= 450
 });

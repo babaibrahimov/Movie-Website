@@ -574,7 +574,9 @@ header.sticky nav ul li a:hover
 /* ///////////////////////////////////////////////////////////////// */
 
 
-.wrapper-suggestions, .wrapper-for-childrens
+.wrapper-suggestions, 
+.wrapper-for-childrens, 
+.wrapper-sport
 {
     width: 100%;
     position: relative;
@@ -584,14 +586,18 @@ header.sticky nav ul li a:hover
     color: #fff;
 }
 
-.wrapper-suggestions h3
+.wrapper-suggestions h3, 
+.wrapper-for-childrens h3, 
+.wrapper-sport h3
 {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
 }
 
-.wrapper-suggestions h3 i
+.wrapper-suggestions h3 i, 
+.wrapper-for-childrens h3 i, 
+.wrapper-sport h3 i
 {
     margin-right: 5px;
     font-size: .8rem;
@@ -599,7 +605,9 @@ header.sticky nav ul li a:hover
 
 
 
-.suggestion-films, .films-for-childrens
+.suggestion-films, 
+.films-for-childrens, 
+.sport-films
 {
     width: 100%;
     max-height: 200px;
@@ -615,12 +623,15 @@ header.sticky nav ul li a:hover
     /* border: 3px solid #fff; */
 }
 
-.suggestion-films::-webkit-scrollbar, .films-for-childrens::-webkit-scrollbar
+.suggestion-films::-webkit-scrollbar, 
+.films-for-childrens::-webkit-scrollbar, 
+.sport-films::-webkit-scrollbar
 {
     height: 0;
     width: 0;
 }
-.button-right, .button-left
+.button-right, 
+.button-left
 {
     position: absolute;
     top: 58%;
@@ -652,13 +663,16 @@ header.sticky nav ul li a:hover
     left: 20px;
 }
 
-.button-right:hover, .button-left:hover
+.button-right:hover, 
+.button-left:hover
 {
     opacity: 1;
 }
 
 
-.suggestion-films .item, .films-for-childrens .item
+.suggestion-films .item, 
+.films-for-childrens .item, 
+.sport-films .item
 {
     min-width: 300px;
     width: 100%;
@@ -668,7 +682,9 @@ header.sticky nav ul li a:hover
     height: 200px;
 }
 
-.suggestion-films .item img, .films-for-childrens .item img
+.suggestion-films .item img,
+.films-for-childrens .item img, 
+.sport-films .item img
 {
     width: 100%;
     border-radius: 5px;
