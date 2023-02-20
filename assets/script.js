@@ -51,7 +51,10 @@ profileClose.addEventListener('click', () => {
 
 let suggestionRightButton = document.getElementById('btn-suggestions-right');
 let suggestionLeftButton = document.getElementById('btn-suggestions-left');
+let forChildrenRightButton = document.getElementById('btn-for-childrens-right');
+let forChildrenLeftButton = document.getElementById('btn-for-childrens-left');
 let suggestionScrollArea = document.querySelector('.suggestion-films');
+let forChildrenScrollArea = document.querySelector('.films-for-childrens');
 
 suggestionRightButton.addEventListener('click', () => {
     suggestionScrollArea.scrollLeft += 450
@@ -59,4 +62,12 @@ suggestionRightButton.addEventListener('click', () => {
 
 suggestionLeftButton.addEventListener('click', () => {
     suggestionScrollArea.scrollLeft -= 450
+});
+
+forChildrenRightButton.addEventListener('click', () => {
+    forChildrenScrollArea.scrollLeft += 450
+});
+
+forChildrenLeftButton.addEventListener('click', () => {
+    forChildrenScrollArea.scrollLeft -= 450
 });
