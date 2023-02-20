@@ -47,3 +47,16 @@ user.addEventListener('click', () => {
 profileClose.addEventListener('click', () => {
     profileBox.classList.remove('active')
 });
+
+
+let suggestionRightButton = document.getElementById('btn-suggestions-right');
+let suggestionLeftButton = document.getElementById('btn-suggestions-left');
+let suggestionScrollArea = document.querySelector('.suggestion-films');
+
+suggestionRightButton.addEventListener('click', () => {
+    suggestionScrollArea.scrollLeft += 450
+});
+
+suggestionLeftButton.addEventListener('click', () => {
+    suggestionScrollArea.scrollLeft -= 450
+});
