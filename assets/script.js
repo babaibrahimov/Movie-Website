@@ -48,6 +48,22 @@ profileClose.addEventListener('click', () => {
     profileBox.classList.remove('active')
 });
 
+// Search area
+const searchActivate = document.getElementById('search-activate');
+const searchbtn = document.getElementById('search');
+let searchInput = document.querySelector('.search-area input')
+let searchArea = document.querySelector('.search-area');
+
+searchActivate.addEventListener('click', () => {
+    searchArea.classList.toggle('active')
+});
+
+searchbtn.addEventListener('click', () => {
+    searchArea.classList.toggle('active')
+    searchInput.value = ""
+});
+
+
 
 let suggestionRightButton = document.getElementById('btn-suggestions-right');
 let suggestionLeftButton = document.getElementById('btn-suggestions-left');
