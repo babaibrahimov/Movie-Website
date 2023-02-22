@@ -681,6 +681,14 @@ header.sticky #search-activate{color: #000;}
     font-size: .8rem;
 }
 
+.wrapper-suggestions h3 a, 
+.wrapper-for-childrens h3 a, 
+.wrapper-sport h3 a,
+.wrapper-comedy h3 a
+{
+    color: #fff;
+}
+
 
 
 .suggestion-films, 
